@@ -6,7 +6,7 @@
 ## Language 
 #### Python 
 #### Modules - BeautifulSoup , Pandas,pymongo, requests
-## Instruction 
+## Instructions
 #### 1 Copy the code in pycharm or visual studio
 #### 2 Install beautifulsoup and pymongo if they are not in your envirnment
 #### 3 Open Mongo compass connect to server 
