@@ -1,8 +1,8 @@
-import requests                                                                              #the request library to request the url
+import requests                                                                             # the request library to request the url
 from bs4 import BeautifulSoup
 import pandas as pd
-from pymongo import MongoClient                                                             #to form connection with mongodb
-mongo_client = MongoClient('localhost', 27017)                                              #connecting mongobd
+from pymongo import MongoClient                                                             # to form connection with mongodb
+mongo_client = MongoClient('localhost', 27017)                                              # connecting mongobd
 
 url = "https://www.zaubacorp.com/company-list-company.html"
 page = requests.get(url)                                                                    # read the webpage
@@ -16,17 +16,17 @@ for i in table.find_all('th'):                                                  
 
 df = pd.DataFrame(columns=headers)                                                          # dataframe created 
 
-for i in range(1, 3001):                                                                    # run the loop to access the pagination 
+for i in range(1, 13334):                                                                   # run the loop to access the pagination 
     new_urls = f'https://www.zaubacorp.com/company-list/p-{i}-company.html'                 # forming url for every page 
     page = requests.get(new_urls)
     soup = BeautifulSoup(page.text, 'lxml')
     table = soup.find('table', {'class': "table table-striped col-md-12 col-sm-12 col-xs-12"}) # get table of individual page
     for j in table.find_all('tr')[1:]:
-        row_data = j.find_all('td')                                                          # find all the table data
-        row = [tr.text for tr in row_data]                                                   # get text from all table data
-        length = len(df)                                                                     # get the length of dataframe
-        df.loc[length] = row                                                                 # length will help to get index of new row to insert new row
-    print(i)                                                                                 # help to see which page is being rendered 
+        row_data = j.find_all('td')                                                         # find all the table data
+        row = [tr.text for tr in row_data]                                                  # get text from all table data
+        length = len(df)                                                                    # get the length of dataframe
+        df.loc[length] = row                                                                # length will help to get index of new row to insert new row
+    print(i)                                                                                # help to see which page is being rendered 
 
 
 #df.to_csv('C:/Users/Jayshree/OneDrive/Desktop/Study Material/testing.csv')
