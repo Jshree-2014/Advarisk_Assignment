@@ -1,6 +1,6 @@
 # Scrap The Tables
 ## Description 
-#### Hello Team, We know Zuba Corporation this corporation has the details of all the companies incorporated in India which is more than 3,90,000 to extract all the details from the website manually is tough to make this task easier I have written a Python script which will extract the details of all the companies from this website and will store the data in CSV file as well as in MongoDB database collection in the form of key-value pair 
+#### Hello Team, We know Zuba Corporation this corporation has the details of all the companies incorporated in India on there website which is more than 3,90,000 to extract all the details from this website manually is tough to make this task easier I have written a Python script that will extract the details of all the companies from this website and will store the data in CSV file as well as in MongoDB database collection in the form of key-value pair 
 ## Applications Used 
 #### PyCharm , Mongo Compass 
 ## Language 
