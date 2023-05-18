@@ -2,7 +2,7 @@
 ## Description 
 #### Hello Team , We know Zuba Corporation this corporation have the details of all the companies incorporated in india which is more than 3,90,000 to extract all the details from the website manualy is tough to make this task easier I have written a python script which will extract the details of all the comapines from zuba corpportaion website and will store the data in CSV as well as in Mongodb database collection 
 ## Applications Used 
-####Pycharm , Mongo Compass 
+#### Pycharm , Mongo Compass 
 ## Language 
 #### Python 
 #### Modules - BeautifulSoup , Pandas,pymongo, requests
